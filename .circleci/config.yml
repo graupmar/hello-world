@@ -10,6 +10,7 @@ jobs:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
     steps:
+      - checkout
       - run:
           #echo hello Marco
           name: "echo an env var that is part of our project"
