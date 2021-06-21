@@ -11,6 +11,9 @@ jobs:
           password: $DOCKERHUB_PASSWORD
     steps:
       - run: echo hello Marco
+          name: "echo an env var that is part of our project"
+          command: |
+            echo $MY_ENV_VAR
   print_world:
     docker:
       - image: circleci/node:13.8.0
